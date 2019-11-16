@@ -183,13 +183,6 @@ impl From<u8> for Choice {
     }
 }
 
-impl From<bool> for Choice {
-    #[inline]
-    fn from(input: bool) -> Choice {
-        Choice(black_box(input as u8))
-    }
-}
-
 /// An `Eq`-like trait that produces a `Choice` instead of a `bool`.
 ///
 /// # Example
